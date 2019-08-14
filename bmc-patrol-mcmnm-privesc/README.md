@@ -3,7 +3,7 @@
 For more information: https://itm4n.github.io/bmc-patrol-mcmnm-privesc/ 
 
 <p align="center">
-  <img src="/ca-dollaru-uxdqmsrv-privesc/screenshots/00_exploit-demo.gif">
+  <img src="/bmc-patrol-mcmnm-privesc/screenshots/00_exploit-demo.gif">
 </p>
 
 ## Disclosure timeline
