@@ -2,6 +2,10 @@
 
 For more information: https://itm4n.github.io/ca-dollaru-uxdqmsrv-privesc/
 
+<p align="center">
+  <img src="/ca-dollaru-uxdqmsrv-privesc/screenshots/ca-dollaru-uxdqmsrv-privesc.gif">
+</p>
+
 ## Remediation  
 At the time of writing, Dollar Universe 5.3.3 is reaching its end of life. Therefore, no patch has been developped on this version.
 

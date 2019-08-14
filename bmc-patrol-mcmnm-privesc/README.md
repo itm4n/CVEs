@@ -2,6 +2,10 @@
 
 For more information: https://itm4n.github.io/bmc-patrol-mcmnm-privesc/ 
 
+<p align="center">
+  <img src="/ca-dollaru-uxdqmsrv-privesc/screenshots/00_exploit-demo.gif">
+</p>
+
 ## Disclosure timeline
 2017-04-21 - Vulnerability discovered  
 2017-05-09 - Vendor contacted  
