@@ -2,7 +2,7 @@
 
 | CVE ID | Title |
 | :---: | --- |
-| CVE-2020-1194 | Windows Tracing Arbitrary Directory Create |
+| CVE-2020-1194 | Microsoft Windows Tracing Arbitrary Directory Create |
 | CVE-2020-1170 | Microsoft Windows Defender Elevation of Privilege Vulnerability |
 | CVE-2020-1029 | Microsoft Windows DiagTrack Arbitrary File Delete |
 | CVE-2020-0863 | Microsoft Windows DiagTrack 'UtcApi_DownloadLatestSettings' Arbitrary File Read |
